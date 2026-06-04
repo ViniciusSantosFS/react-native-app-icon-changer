@@ -52,7 +52,7 @@ class AppIconChangerModule(
 
     @ReactMethod
     fun getActiveIcon(promise: Promise) {
-        val activity: Activity? = currentActivity
+        val activity: Activity? = reactApplicationContext.currentActivity
         if (activity == null) {
             promise.reject("ACTIVITY_NOT_FOUND", "Activity was not found")
             return
@@ -127,7 +127,7 @@ class AppIconChangerModule(
         isChangingIcon = true
         
         try {
-            val activity = currentActivity
+            val activity = reactApplicationContext.currentActivity
             if (activity == null) {
                 Log.w(TAG, "Activity is null, cannot complete icon change")
                 return
@@ -143,6 +143,7 @@ class AppIconChangerModule(
                         PackageManager.DONT_KILL_APP
                     )
                     componentClass = newClass
+                    classesToKill.remove(newClass)
                     Log.d(TAG, "Icon enabled successfully: $newClass")
                 } catch (e: Exception) {
                     Log.e(TAG, "Failed to enable component: $newClass", e)
@@ -177,7 +178,7 @@ class AppIconChangerModule(
     @ReactMethod
     @Synchronized
     fun setIcon(iconName: String?, promise: Promise) {
-        val activity = currentActivity
+        val activity = reactApplicationContext.currentActivity
         if (activity == null) {
             promise.reject("ACTIVITY_NOT_FOUND", "The activity is null. Check if the app is running properly.")
             return
@@ -195,6 +196,7 @@ class AppIconChangerModule(
 
         val newIconName = if (iconName.isEmpty()) "Default" else iconName
         val activeClass = "$packageName$MAIN_ACTIVITY_BASE_NAME$newIconName"
+        classesToKill.remove(activeClass)
 
         if (componentClass == activeClass && pendingNewClass == null) {
             Log.d(TAG, "Icon already active: $componentClass")
