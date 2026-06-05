@@ -1,5 +1,5 @@
 {
-  "name": "react-native-app-icon-changer",
+  "name": "@vinicius_santos/react-native-app-icon-changer",
   "version": "1.4.2",
   "description": "react-native-app-icon-changer is a tool for easily updating the app icon of your React Native project for both iOS and Android platforms. This package simplifies the process of changing the default app icon without needing to manually modify platform-specific assets or configurations. It automates the generation of required icon sizes and updates the necessary files in your project, making the process quick and seamless.",
   "source": "./src/index.tsx",
@@ -52,14 +52,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FerhatAdibelli0/react-native-app-icon-changer.git"
+    "url": "git+https://github.com/ViniciusSantosFS/react-native-app-icon-changer.git"
   },
-  "author": "Ferhat Adıbelli <ferhatadibelli9@gmail.com> (https://github.com/FerhatAdibelli0)",
+  "author": "Vinicius Florêncio (https://github.com/ViniciusSantosFS)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FerhatAdibelli0/react-native-app-icon-changer/issues"
+    "url": "https://github.com/ViniciusSantosFS/react-native-app-icon-changer/issues"
   },
-  "homepage": "https://github.com/FerhatAdibelli0/react-native-app-icon-changer#readme",
+  "homepage": "https://github.com/ViniciusSantosFS/react-native-app-icon-changer#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
