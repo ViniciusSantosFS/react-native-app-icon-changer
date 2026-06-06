@@ -1,6 +1,7 @@
 require "json"
 
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
+source = package["repository"]["url"].sub(/^git\+/, "")
 folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32'
 
 Pod::Spec.new do |s|
@@ -12,7 +13,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => min_ios_version_supported }
-  s.source       = { :git => "https://github.com/FerhatAdibelli0/react-native-app-icon-changer.git", :tag => "#{s.version}" }
+  s.source       = { :git => source, :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm}"
 
