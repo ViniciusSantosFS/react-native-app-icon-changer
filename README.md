@@ -1,6 +1,3 @@
-[![npm version](https://badge.fury.io/js/react-native-app-icon-changer.svg)](https://badge.fury.io/js/react-native-app-icon-changer)
-
-
 # React Native App Icon Changer
 
 ## Project Origin
