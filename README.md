@@ -1,7 +1,11 @@
 [![npm version](https://badge.fury.io/js/react-native-app-icon-changer.svg)](https://badge.fury.io/js/react-native-app-icon-changer)
-![GitHub stars](https://img.shields.io/github/stars/FerhatAdibelli0/react-native-app-icon-changer?style=social)
+
 
 # React Native App Icon Changer
+
+## Project Origin
+
+This project is a fork of [FerhatAdibelli0/react-native-app-icon-changer](https://github.com/FerhatAdibelli0/react-native-app-icon-changer) with improvements and support for the latest React Native `0.85.x` version.
 
 `react-native-app-icon-changer` is a powerful and easy-to-use library that allows you to dynamically manage app icons in your React Native projects. It supports both iOS and Android platforms, enabling seamless switching between multiple app icons without requiring manual intervention or complex configuration. Whether you want to personalize your app's appearance or highlight special events, this library simplifies the entire process.
 
